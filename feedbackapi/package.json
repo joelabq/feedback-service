@@ -1,0 +1,20 @@
+{
+  "name": "feedbackapi",
+  "version": "1.0.0",
+  "description": "api for feedback microservice",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "client-sessions": "^0.8.0",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "postgres": "^1.0.2"
+  }
+}
