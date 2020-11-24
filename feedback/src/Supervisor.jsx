@@ -32,7 +32,7 @@ class Supervisor extends React.Component{
         
     }
     render(){
-        
+        if (!currentUser) { return (<div>Please Login</div>)}
         if (this.props.showFeedbackList && !this.state.showFeedbackForm){
            
             let sub = this.props.subordinates.map(each => (<tr><td>

@@ -43,8 +43,8 @@ class ViewFeedback extends React.Component{
         console.log(requestOptions);
        
         let apiCall = apiType.feedbackAPI + `/memberResponse`;
-        let response = "";
-            response = await fetch(apiCall, requestOptions)
+       
+       await fetch(apiCall, requestOptions)
             .then(response => response.json())
         this.props.memberSubmit();
     }

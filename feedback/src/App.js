@@ -88,7 +88,7 @@ class App extends React.Component {
     this.state.subordinates.map(each => {
         
         let supervisor = subDetails.find(sub => sub.userid === each.subordinateID);
-        let recordDate = supervisor.feedbackdate
+       //let recordDate = supervisor.feedbackdate
         tempObj.push({...tempObj,subordinateID:each.subordinateID,DateOfSupervison: each.DateOfSupervison,firstName: supervisor.firstName,
                       lastName: supervisor.lastName})
        return tempObj;                    
@@ -131,12 +131,12 @@ class App extends React.Component {
           
         </div>
       </div><div><br/></div>
-      {(this.state.isSupervisor && this.state.viewTracking == "default")? <button onClick={this.handleViewSubord} className="BUTTON_UXG">View My subordinates</button> : ""}
+      {(this.state.isSupervisor && this.state.viewTracking === "default")? <button onClick={this.handleViewSubord} className="BUTTON_UXG">View My subordinates</button> : ""}
     
-      {this.state.viewTracking == "default"  ? <Feedback viewUser={this.state.viewUser} /> : 
+      {this.state.viewTracking === "default"  ? <Feedback viewUser={this.state.viewUser} /> : 
         <button onClick={this.handleViewMyFeedback} className="BUTTON_UXG">View my feedback</button> }
       
-        {(this.state.isSupervisor && this.state.viewTracking == "subList") ? 
+        {(this.state.isSupervisor && this.state.viewTracking === "subList") ? 
           <Supervisor subordinates={this.state.subordinates} showFeedbackList={this.state.viewTracking} userInfo={this.state.userInfo} /> 
           : "" }
       
